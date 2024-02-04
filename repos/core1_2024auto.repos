@@ -1,0 +1,25 @@
+repositories:
+  realsense-ros:
+    type: git
+    url: https://github.com/StrayedCats/realsense-ros.git
+    version: 58593f6
+  detector2d:
+    type: git
+    url: https://github.com/StrayedCats/detector2d.git
+    version humble
+  yolox_trt:
+    type: git
+    url: https://github.com/StrayedCats/yolox_trt.git
+    version: humble
+  bbox2d_to_3d:
+    type: git
+    url: https://github.com/StrayedCats/bbox2d_to_3d.git
+    version: humble
+  CoRE-1.Agent:
+    type: git
+    url: https://github.com/StrayedCats/CoRE-1.Agent.git
+    version: humble
+  AutoDriver:
+    type: git
+    url: https://github.com/StrayedCats/AutoDriver.git
+    version: humble
