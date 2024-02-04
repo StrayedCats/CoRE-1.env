@@ -74,7 +74,9 @@ RUN apt update && \
                     ros-${ROS_DISTRO}-parameter-traits \
                     ros-${ROS_DISTRO}-ros-base \
                     ros-${ROS_DISTRO}-rqt-image-view \
-                    ros-${ROS_DISTRO}-v4l2-camera && \
+                    ros-${ROS_DISTRO}-v4l2-camera \
+                    ros-${ROS_DISTRO}-vision-msgs \
+                    ros-${ROS_DISTRO}-vision-opencv && \
     apt -y clean && \
     rm -rf /var/lib/apt/lists/* && \
     pip install -U pip && \
