@@ -6,7 +6,7 @@ repositories:
   detector2d:
     type: git
     url: https://github.com/StrayedCats/detector2d.git
-    version humble
+    version: humble
   yolox_trt:
     type: git
     url: https://github.com/StrayedCats/yolox_trt.git
@@ -15,11 +15,15 @@ repositories:
     type: git
     url: https://github.com/StrayedCats/bbox2d_to_3d.git
     version: humble
-  CoRE-1.Agent:
-    type: git
-    url: https://github.com/StrayedCats/CoRE-1.Agent.git
-    version: humble
   AutoDriver:
     type: git
     url: https://github.com/StrayedCats/AutoDriver.git
+    version: humble
+  detector2d:
+    type: git
+    url: https://github.com/StrayedCats/detector2d.git
+    version: humble
+  BehaviorTree.ROS2:
+    type: git
+    url: https://github.com/BehaviorTree/BehaviorTree.ROS2.git
     version: humble

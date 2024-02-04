@@ -9,11 +9,12 @@ cd ${SCRIPT_DIR}
 
 if [ ${CLEANUP} = true ]; then
     rm -rf ${SCRIPT_DIR}/build ${SCRIPT_DIR}/install ${SCRIPT_DIR}/log ${SCRIPT_DIR}/src
-    mkdir -p ${SCRIPT_DIR}/src/
 fi
+mkdir -p ${SCRIPT_DIR}/src/
 
 source /opt/ros/${DISTRO}/setup.bash
-vcs import ${SCRIPT_DIR}/src/ < ${REPOS_DIR}/${REPOS}
+# vcs import ${SCRIPT_DIR}/src/ < ${REPOS_DIR}/${REPOS}
+apt update
 rosdep install -i --from-paths ${SCRIPT_DIR}/src/
 
 colcon build

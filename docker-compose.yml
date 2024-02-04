@@ -14,9 +14,10 @@ services:
         environment:
             - DISPLAY=$DISPLAY
         volumes:
-            - $HOME/ros2_ws:/root/ros2_ws
+            - ./workspace:/workspace
             - /tmp/.X11-unix:/tmp/.X11-unix
+            - ./repos:/repos
         privileged: true
-        working_dir: /root/ros2_ws
+        working_dir: /workspace
         tty: true
         command: bash

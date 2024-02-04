@@ -68,9 +68,13 @@ RUN apt update && \
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null && \
     sed -i -e 's/ubuntu .* main/ubuntu jammy main/g' /etc/apt/sources.list.d/ros2.list && \
     apt update && \
-    apt install -y ros-dev-tools \
+    apt install -y libboost-dev \
+                    ros-dev-tools \
+                    ros-${ROS_DISTRO}-behaviortree-cpp \
                     ros-${ROS_DISTRO}-cv-bridge \
                     ros-${ROS_DISTRO}-generate-parameter-library \
+                    ros-${ROS_DISTRO}-hardware-interface \
+                    ros-${ROS_DISTRO}-diagnostic-updater \
                     ros-${ROS_DISTRO}-parameter-traits \
                     ros-${ROS_DISTRO}-ros-base \
                     ros-${ROS_DISTRO}-rqt-image-view \
@@ -90,3 +94,14 @@ RUN echo "source /ros_entrypoint.sh ${ROS_DISTRO}" >> /root/.bashrc
 # ENTRYPOINT ["/ros_entrypoint.sh"]
 
 # =================================================================================================
+
+RUN mkdir -p /etc/apt/keyrings && \
+    curl -sSf https://librealsense.intel.com/Debian/librealsense.pgp | tee /etc/apt/keyrings/librealsense.pgp > /dev/null && \
+    echo "deb [signed-by=/etc/apt/keyrings/librealsense.pgp] https://librealsense.intel.com/Debian/apt-repo `lsb_release -cs` main" | \
+    tee /etc/apt/sources.list.d/librealsense.list && \
+    apt update && \
+    apt install -y librealsense2-dkms librealsense2-utils librealsense2-dev && \
+    apt -y clean && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN rosdep init
