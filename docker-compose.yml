@@ -17,6 +17,7 @@ services:
             - ./workspace:/workspace
             - /tmp/.X11-unix:/tmp/.X11-unix
             - ./repos:/repos
+            - ./models:/models
         privileged: true
         working_dir: /workspace
         tty: true
