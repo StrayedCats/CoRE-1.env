@@ -72,15 +72,18 @@ RUN apt update && \
                     ros-dev-tools \
                     ros-${ROS_DISTRO}-behaviortree-cpp \
                     ros-${ROS_DISTRO}-cv-bridge \
+                    ros-${ROS_DISTRO}-control-msgs \
                     ros-${ROS_DISTRO}-generate-parameter-library \
                     ros-${ROS_DISTRO}-hardware-interface \
                     ros-${ROS_DISTRO}-diagnostic-updater \
                     ros-${ROS_DISTRO}-parameter-traits \
                     ros-${ROS_DISTRO}-ros-base \
+                    ros-${ROS_DISTRO}-ros2-control* \
                     ros-${ROS_DISTRO}-rqt-image-view \
                     ros-${ROS_DISTRO}-v4l2-camera \
                     ros-${ROS_DISTRO}-vision-msgs \
-                    ros-${ROS_DISTRO}-vision-opencv && \
+                    ros-${ROS_DISTRO}-vision-opencv \
+                    ros-${ROS_DISTRO}-xacro && \
     apt -y clean && \
     rm -rf /var/lib/apt/lists/* && \
     pip install -U pip && \

@@ -9,6 +9,7 @@ services:
                 - TENSORRT_VERSION=8.6
                 - CUDNN_VERSION=8.8
                 - PYTHON_VERSION=3.10
+                - ROS_DISTRO=humble
         network_mode: host
         runtime: nvidia
         environment:
