@@ -1,6 +1,9 @@
 # CoRE-1.env
 CoRE-1 dockerfile for development
 
+<img width="563" alt="スクリーンショット 2024-02-12 10 59 42" src="https://github.com/StrayedCats/CoRE-1.env/assets/67567093/6650970d-1bb8-435a-9db7-fea7580a4bed">
+
+
 ## Requirements
 
 - OS : Ubuntu 22.04 (kernel version : 6.5.0-17-generic)
