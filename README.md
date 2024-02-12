@@ -18,12 +18,16 @@ CoRE-1 dockerfile for development
 ### Build
 
 ```bash
-docker-compose up --build auto_2024
+docker-compose build --no-cache auto_2024
 ```
 
 Use with `--no-cache` when rebuilding.
 
 ### Run
+
+```bash
+docker-compose up auto_2024
+```
 
 ```bash
 docker-compose exec auto_2024 /bin/bash
