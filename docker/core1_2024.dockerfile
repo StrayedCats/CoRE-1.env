@@ -105,4 +105,8 @@ RUN mkdir -p /etc/apt/keyrings && \
     apt -y clean && \
     rm -rf /var/lib/apt/lists/*
 
+# Transformer
+RUN pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2 --index-url https://download.pytorch.org/whl/cu121
+RUN pip install opencv-python==4.9.0.80 transformers==4.37.2
+
 RUN rosdep init
