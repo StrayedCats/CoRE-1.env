@@ -15,6 +15,13 @@ CoRE-1 dockerfile for development
 
 ## Usage
 
+### Import
+
+```bash
+cd ./workspace
+vcs import src < ../repos/core1_2024auto.repos
+```
+
 ### Build
 
 ```bash
