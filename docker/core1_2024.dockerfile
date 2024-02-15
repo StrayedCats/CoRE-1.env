@@ -80,6 +80,7 @@ RUN apt update && \
                     ros-${ROS_DISTRO}-ros-base \
                     ros-${ROS_DISTRO}-ros2-control* \
                     ros-${ROS_DISTRO}-rqt-image-view \
+                    ros-${ROS_DISTRO}-rviz2 \
                     ros-${ROS_DISTRO}-tf* \
                     ros-${ROS_DISTRO}-v4l2-camera \
                     ros-${ROS_DISTRO}-vision-msgs \
