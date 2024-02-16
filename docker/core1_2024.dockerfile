@@ -73,6 +73,7 @@ RUN apt update && \
                     ros-${ROS_DISTRO}-behaviortree-cpp \
                     ros-${ROS_DISTRO}-cv-bridge \
                     ros-${ROS_DISTRO}-control-msgs \
+                    ros-${ROS_DISTRO}-rmw-cyclonedds-cpp \
                     ros-${ROS_DISTRO}-generate-parameter-library \
                     ros-${ROS_DISTRO}-hardware-interface \
                     ros-${ROS_DISTRO}-diagnostic-updater \

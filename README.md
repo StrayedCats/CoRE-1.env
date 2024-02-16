@@ -25,7 +25,8 @@ vcs import src < ../repos/core1_2024auto.repos
 ### Build
 
 ```bash
-docker-compose build --no-cache auto_2024
+docker-compose build auto_2024
+# docker-compose build --no-cache auto_2024
 ```
 
 Use with `--no-cache` when rebuilding.
